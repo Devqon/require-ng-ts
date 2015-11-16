@@ -4,7 +4,7 @@ require(["Main.Config"], function (config) {
         paths: {
             "angular": "Libs/angular/angular",
             "config": "Main.Config",
-            "Common": "Common/Common",
+            "common": "Common/Common",
         },
         shim: {
             "angular": {
@@ -23,7 +23,7 @@ require(["Main.Config"], function (config) {
             }
         });
         require([
-            "Common",
+            "common",
             "appMain"
         ], function () {
             angular.bootstrap($app, [appName]);

@@ -207,6 +207,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Angular\App1\App.ts" />
+    <TypeScriptCompile Include="Angular\App1\Controllers\TestController.ts" />
     <TypeScriptCompile Include="Angular\App1\Main.ts" />
     <TypeScriptCompile Include="Angular\Common\Common.ts" />
     <TypeScriptCompile Include="Angular\Main.Config.ts" />

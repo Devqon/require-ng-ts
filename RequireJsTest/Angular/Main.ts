@@ -4,9 +4,9 @@ require(["Main.Config"], (config: IConfig) => {
 
     requirejs.config({
         paths: {
-            "angular": "Libs/angular/angular",
-            "config": "Main.Config",
-            "Common": "Common/Common",
+            "angular"   : "Libs/angular/angular",
+            "config"    : "Main.Config",
+            "common"    : "Common/Common",
         },
         shim: {
             "angular": {
@@ -17,10 +17,10 @@ require(["Main.Config"], (config: IConfig) => {
     });
 
     require(["angular"], (angular: angular.IAngularStatic) => {
-        var wrapper: HTMLElement = document.getElementById("ng-app-wrapper");
-        var $app: angular.IAugmentedJQuery = angular.element(wrapper);
-        var directory: string = $app.data("directory");
-        var appName: string = $app.data("app-name");
+        var wrapper: HTMLElement            = document.getElementById("ng-app-wrapper");
+        var $app: angular.IAugmentedJQuery  = angular.element(wrapper);
+        var directory: string               = $app.data("directory");
+        var appName: string                 = $app.data("app-name");
 
         requirejs.config({
             paths: {
@@ -29,7 +29,7 @@ require(["Main.Config"], (config: IConfig) => {
         });
 
         require([
-            "Common",
+            "common",
             "appMain"
         ], () => {
             angular.bootstrap($app, [appName]);
