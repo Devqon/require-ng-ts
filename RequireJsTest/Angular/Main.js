@@ -1,8 +1,12 @@
 /// <reference path="../scripts/typings/tsd.d.ts" />
+/*
+    ???
+    the config passed in here I want to be available everywhere
+*/
 require(["Main.Config"], function (config) {
     requirejs.config({
         paths: {
-            "angular": "Libs/angular/angular",
+            "angular": config.libsPath + "angular/angular",
             "config": "Main.Config",
             "common": "Common/Common",
         },
@@ -10,7 +14,7 @@ require(["Main.Config"], function (config) {
             "angular": {
                 exports: "angular"
             }
-        },
+        }
     });
     require(["angular"], function (angular) {
         var wrapper = document.getElementById("ng-app-wrapper");

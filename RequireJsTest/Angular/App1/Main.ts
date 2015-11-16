@@ -10,4 +10,4 @@
     }
 });
 
-define(["app"]);
+define(["app"]); // first load App which defines the angular app module

@@ -1,10 +1,14 @@
 ﻿/// <reference path="../scripts/typings/tsd.d.ts" />
 
+/* 
+    ???
+    the config passed in here I want to be available everywhere
+*/
 require(["Main.Config"], (config: IConfig) => {
 
     requirejs.config({
         paths: {
-            "angular"   : "Libs/angular/angular",
+            "angular"   : config.libsPath + "angular/angular",
             "config"    : "Main.Config",
             "common"    : "Common/Common",
         },
@@ -12,8 +16,7 @@ require(["Main.Config"], (config: IConfig) => {
             "angular": {
                 exports: "angular"
             }
-        },
-
+        }
     });
 
     require(["angular"], (angular: angular.IAngularStatic) => {
