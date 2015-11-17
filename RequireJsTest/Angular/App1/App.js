@@ -2,10 +2,14 @@
 define([
     "App1/Controllers/TestController"
 ], function (testCtrl) {
-    angular.module("App1", [
+    var moduleName = "App1";
+    angular.module(moduleName, [
         "common",
         "ui.router"
     ])
         .controller("testCtrl", testCtrl);
+    return {
+        name: moduleName
+    };
 });
 //# sourceMappingURL=App.js.map

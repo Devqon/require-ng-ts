@@ -1,7 +1,17 @@
-﻿define(["angular"], (angular: angular.IAngularStatic) => {
+﻿var authorization: IRequireAngularModule = require("./Authorization/Authorization");
 
-    angular.module("common", [])
-        .constant("COMMON_CONSTANTS", {
-        });
+var moduleName = "common";
 
-});
+angular.module(moduleName, [
+    authorization.name
+])
+    .constant("COMMON_CONSTANTS", {
+        // Angular constants
+    })
+
+;
+
+export = 
+{
+    name: moduleName
+}

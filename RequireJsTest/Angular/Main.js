@@ -3,11 +3,15 @@
     ???
     the config passed in here I want to be available everywhere
 */
-require(["Main.Config"], function (config) {
+requirejs.config({
+    paths: {
+        "config": "Main.Config"
+    }
+});
+require(["config"], function (config) {
     requirejs.config({
         paths: {
             "angular": config.libsPath + "angular/angular",
-            "config": "Main.Config",
             "common": "Common/Common",
         },
         shim: {
@@ -17,7 +21,7 @@ require(["Main.Config"], function (config) {
         }
     });
     require(["angular"], function (angular) {
-        var wrapper = document.getElementById("ng-app-wrapper");
+        var wrapper = document.getElementById(config.angularWrapperId);
         var $app = angular.element(wrapper);
         var directory = $app.data("directory");
         var appName = $app.data("app-name");

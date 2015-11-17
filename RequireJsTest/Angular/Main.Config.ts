@@ -1,10 +1,9 @@
-﻿define([], () => {
+﻿class GlobalConfig implements IGlobalConfig {
 
-    var config: IConfig = {
-        libsPath: "Libs/",
-        appMainFile: "Main"
-    }
+    angularWrapperId    = "ng-app-wrapper";
+    libsPath            = "Libs/";
+    appMainFile         = "Main";
 
-    return config;
+}
 
-});
+export = GlobalConfig;
