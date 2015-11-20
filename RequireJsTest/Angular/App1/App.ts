@@ -1,4 +1,4 @@
-﻿// dit zou ik wel relatief willen zien
+﻿// Kan dit relatief?
 define([
     "App1/Controllers/TestController"
 ], (testCtrl) => {

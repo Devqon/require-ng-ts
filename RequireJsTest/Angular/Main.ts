@@ -40,8 +40,17 @@ require(["config"], (config: IGlobalConfig) => {
         require([
             "common",
             "appMain"
-        ], () => {
-            angular.bootstrap($app, [appName]);
+        ], (common, app: IRequireAngularModule) => {
+            if (app == null || !app.hasOwnProperty("name")) {
+                console.error("You need to return an object with a name to be able to bootstrap the angular application.");
+            } else if (appName != app.name) {
+                console.warn("The defined app name in Default.aspx (" + appName + ") is not the same as the angular module name (" + app.name + ".");
+            }
+
+            // Bootstrap the application
+            var appBootstrapName = app.name || appName;
+            console.log("Bootstrapping application '" + appBootstrapName + "'");
+            angular.bootstrap($app, [app.name || appName]);
         });
     });
 

@@ -6,4 +6,4 @@
 
 }
 
-export = GlobalConfig;
+export = new GlobalConfig();

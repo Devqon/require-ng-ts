@@ -1,4 +1,5 @@
-﻿var authorization: IRequireAngularModule = require("./Authorization/Authorization");
+﻿// Hoe krijg ik dit relatief?? ./Authorization/Authorization
+import authorization = require("Common/Authorization/Authorization");
 
 var moduleName = "common";
 

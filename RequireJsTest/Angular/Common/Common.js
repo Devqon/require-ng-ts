@@ -1,5 +1,4 @@
-define(["require", "exports"], function (require, exports) {
-    var authorization = require("./Authorization/Authorization");
+define(["require", "exports", "Common/Authorization/Authorization"], function (require, exports, authorization) {
     var moduleName = "common";
     angular.module(moduleName, [
         authorization.name

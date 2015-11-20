@@ -8,5 +8,8 @@ requirejs.config({
         "app": ["angular-ui-router"]
     }
 });
-define(["app"]); // first load App which defines the angular app module
+// first load App which defines the angular app module
+define(["app"], function (app) {
+    return app;
+});
 //# sourceMappingURL=Main.js.map

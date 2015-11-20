@@ -10,4 +10,7 @@
     }
 });
 
-define(["app"]); // first load App which defines the angular app module
+ // first load App which defines the angular app module
+define(["app"], (app: IRequireAngularModule) => {
+    return app;
+});

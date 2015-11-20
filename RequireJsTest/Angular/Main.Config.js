@@ -7,6 +7,6 @@ define(["require", "exports"], function (require, exports) {
         }
         return GlobalConfig;
     })();
-    return GlobalConfig;
+    return new GlobalConfig();
 });
 //# sourceMappingURL=Main.Config.js.map
