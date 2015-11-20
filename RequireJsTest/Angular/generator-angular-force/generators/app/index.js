@@ -37,7 +37,7 @@ module.exports = generators.Base.extend({
         ];
 
         this.prompt(prompts, function(props) {
-            this.directory = props.directory;
+            this.directory = props.directory || this.appName;
             this.htmlFile = props.htmlFile;
             this.useUiRouting = props.useUiRouting;
 
@@ -58,6 +58,8 @@ module.exports = generators.Base.extend({
             uiRouting: this.useUiRouting,
             directory: this.directory
         };
+
+        var appDirectory = this.domain + "/" + this.directory;
 
         this.template("Default.aspx", this.directory + "/Default.aspx", context);
         this.template("Default.aspx.cs", this.directory + "/Default.aspx.cs", context);

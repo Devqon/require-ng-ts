@@ -12,6 +12,9 @@ requirejs.config({
 
     shim: {
         "app": [
+            <% if (uiRouting) { %>
+            "uiRouter",
+            <% } %>
             // define dependencies here
             // "myLib"
         ]
