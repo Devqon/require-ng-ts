@@ -7,6 +7,8 @@
 *.sln.docstates
 *.sln.ide/
 
+node_modules
+
 # Build results
 
 [Dd]ebug/

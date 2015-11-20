@@ -43,7 +43,7 @@ require(["config"], function (config) {
             // Bootstrap the application
             var appBootstrapName = app.name || appName;
             console.log("Bootstrapping application '" + appBootstrapName + "'");
-            angular.bootstrap($app, [app.name || appName]);
+            angular.bootstrap($app, [appBootstrapName]);
         });
     });
 });

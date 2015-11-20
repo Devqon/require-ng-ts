@@ -1,0 +1,14 @@
+{
+    "name": "generator-angular-force",
+    "version": "0.1.0",
+    "description": "",
+    "keywords": [
+        "yeoman-generator"
+    ],
+    "dependencies": {
+        "yeoman-generator": "^0.21.1"
+    },
+    "files": [ 
+        "generators/app"
+    ]
+}
