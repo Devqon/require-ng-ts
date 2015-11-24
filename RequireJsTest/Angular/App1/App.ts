@@ -7,7 +7,9 @@ define([
 
     angular.module(moduleName, [
         "common",
-        "ui.router"
+        "ngSanitize",
+        "ui.router",
+        "ui.codemirror"
     ])
         .controller("testCtrl", testCtrl)
 

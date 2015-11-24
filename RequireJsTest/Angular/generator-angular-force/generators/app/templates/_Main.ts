@@ -2,19 +2,14 @@
 
 requirejs.config({
     paths: {
-        "app": "<%= appName %>/App",
-        <% if (uiRouting) { %>
-        "uiRouter": libsPath + "angular-ui-router/release/angular-ui-router.min",
-        <% } %>
+        "app": "<%= directory %>/App",
         // any additional libraries here
         // "myLib": libsPath + "/myLib/myFile"
     },
 
     shim: {
         "app": [
-            <% if (uiRouting) { %>
-            "uiRouter",
-            <% } %>
+            <% if (uiRouting) { %>"uiRouter",<% } %>
             // define dependencies here
             // "myLib"
         ]

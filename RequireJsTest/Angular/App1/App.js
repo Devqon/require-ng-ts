@@ -5,7 +5,9 @@ define([
     var moduleName = "App1";
     angular.module(moduleName, [
         "common",
-        "ui.router"
+        "ngSanitize",
+        "ui.router",
+        "ui.codemirror"
     ])
         .controller("testCtrl", testCtrl);
     return {

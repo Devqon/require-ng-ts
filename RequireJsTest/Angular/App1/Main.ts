@@ -1,12 +1,16 @@
-﻿requirejs.config({
+﻿var config: IGlobalConfig = require("config");
+
+requirejs.config({
     paths: {
-        "angular-ui-router": "Libs/angular-ui-router/release/angular-ui-router",
         "app": "App1/App"
     },
 
     shim: {
-        "angular-ui-router": ["angular"],
-        "app": ["angular-ui-router"]
+        "app": [
+            "angular-sanitize",
+            "lib.uiRouter",
+            "lib.uiCodeMirror"
+        ]
     }
 });
 

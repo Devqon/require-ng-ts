@@ -13,10 +13,30 @@ require(["config"], function (config) {
         paths: {
             "angular": config.libsPath + "angular/angular",
             "common": "Common/Common",
+            // angular libs
+            "angular-sanitize": config.libsPath + "angular-sanitize/angular-sanitize",
+            // optional libs, always prefix with 'lib'
+            "lib.uiRouter": config.libsPath + "angular-ui-router/release/angular-ui-router",
+            "lib.uiCodeMirror": config.libsPath + "angular-ui-codemirror/ui-codemirror"
         },
+        packages: [
+            {
+                name: "lib.codeMirror",
+                location: config.libsPath + "codemirror",
+                main: "lib/codemirror"
+            }
+        ],
         shim: {
             "angular": {
                 exports: "angular"
+            },
+            "angular-sanitize": ["angular"],
+            "uiRouter": ["angular"],
+            "lib.uiCodeMirror": {
+                deps: ["angular", "lib.codeMirror"],
+                init: function (angular, codeMirror) {
+                    window.CodeMirror = codeMirror;
+                }
             }
         }
     });
@@ -34,7 +54,7 @@ require(["config"], function (config) {
             "common",
             "appMain"
         ], function (common, app) {
-            if (app == null || !app.hasOwnProperty("name")) {
+            if (app == null || !app.hasOwnProperty("name") || !app.name) {
                 console.error("You need to return an object with a name to be able to bootstrap the angular application.");
             }
             else if (appName != app.name) {
@@ -42,7 +62,7 @@ require(["config"], function (config) {
             }
             // Bootstrap the application
             var appBootstrapName = app.name || appName;
-            console.log("Bootstrapping application '" + appBootstrapName + "'");
+            console.debug("-- Bootstrapping application '" + appBootstrapName + "' --");
             angular.bootstrap($app, [appBootstrapName]);
         });
     });

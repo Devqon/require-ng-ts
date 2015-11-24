@@ -1,12 +1,14 @@
 {
-    "name": "Angular",
-    "version": "0.0.0",
-    "description": "Angular",
-    "license": "MIT",
-    "dependencies": {
-        "angular": "~1.4.7",
-        "angular-ui-router": "~0.2.15",
-        "angular-mocks": "~1.4.7",
-        "requirejs-bower": "latest"
-    }
+  "name": "Angular",
+  "version": "0.0.0",
+  "description": "Angular",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "angular-mocks": "~1.4.7",
+    "requirejs-bower": "latest",
+    "angular-ui-codemirror": "~0.3.0",
+    "angular-sanitize": "~1.4.8"
+  }
 }

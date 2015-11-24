@@ -1,5 +1,9 @@
 ﻿<div data-ng-controller="testCtrl as test">
 
-    <h1>{{ test.testText }}</h1>
+    <h1 ng-bind-html="test.testText"></h1>
 
+    <div class="row">
+        <ui-codemirror ui-codemirror-opts="test.codeMirrorOptions"
+                       ng-model="test.testText"></ui-codemirror>
+    </div>
 </div>

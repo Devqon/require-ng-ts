@@ -97,16 +97,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Angular\App2\Controllers\Templates\" />
-    <Folder Include="Angular\App2\Services\" />
     <Folder Include="Angular\generator-angular-force\generators\app\templates\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Angular\App1\App.html" />
     <Content Include="Angular\App1\Default.aspx" />
-    <Content Include="Angular\App2\App.html" />
-    <Content Include="Angular\App2\Default.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -175,13 +171,6 @@
     <Compile Include="Angular\App1\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Angular\App2\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Angular\App2\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Default.aspx.cs">
@@ -221,9 +210,6 @@
     <TypeScriptCompile Include="Angular\App1\App.ts" />
     <TypeScriptCompile Include="Angular\App1\Controllers\TestController.ts" />
     <TypeScriptCompile Include="Angular\App1\Main.ts" />
-    <TypeScriptCompile Include="Angular\App2\App.ts" />
-    <TypeScriptCompile Include="Angular\App2\Config.ts" />
-    <TypeScriptCompile Include="Angular\App2\Main.ts" />
     <TypeScriptCompile Include="Angular\Common\Authorization\Authorization.ts" />
     <TypeScriptCompile Include="Angular\Common\Common.ts" />
     <TypeScriptCompile Include="Angular\Main.Config.ts" />
